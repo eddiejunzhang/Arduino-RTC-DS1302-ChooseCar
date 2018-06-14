@@ -2,8 +2,8 @@
 #include <DS1302.h>
 
 DS1302 rtc(5, 6, 7); // RST, DAT, CLK
-int Pin1Green = 13;  //第一辆车可以使用的指示灯。
-int Pin1Red = 12;
+int Pin1Green = 13;  //针脚，第一辆车可以使用的指示灯。
+int Pin1Red = 12;  //针脚，第一辆车不可使用的指示灯。
 int Pin2Green = 9;
 int Pin2Red = 8;
 
