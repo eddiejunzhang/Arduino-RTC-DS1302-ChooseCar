@@ -81,7 +81,10 @@ void loop()
   }
 
   getdatetime();
-  delay(5000);
+  //停顿1个小时
+  for (int i = 1; i < 3600; i++) {
+    delay(1000);
+  }
 
   digitalWrite(Pin1Green, LOW);
   digitalWrite(Pin1Red, LOW);
