@@ -1,20 +1,20 @@
 #include <Wire.h>
 #include <DS1302.h>
 
-DS1302 rtc(5, 6, 7); // RST, DAT, CLK
+DS1302 rtc(5, 6, 7); // RST, DAT, CLK 接RTC模块的针脚
 int Pin1Green = 13;  //针脚，第一辆车可以使用的指示灯。
 int Pin1Red = 12;  //针脚，第一辆车不可使用的指示灯。
-int Pin2Green = 9;
-int Pin2Red = 8;
+int Pin2Green = 11;
+int Pin2Red = 10;
 
 int sYear = 2018;  //开始执行限号的年、月、日
-int sMonth = 4;
+int sMonth = 7;
 int sDay = 9;
 
-int sMondayLimit = 4;  //第一周周一限号第一个数，第二数字为4+5=9
+int sMondayLimit = 3;  //第一周周一限号第一个数，第二数字为4+5=9
 
 int Car1 = 6;  //第一辆车的车号尾号
-int Car2 = 9;
+int Car2 = 9;  //第二辆车的车号尾号
 
 int Ban1Weekday; //第一辆车限行的日，1=星期一。如果为0，则不存在此车。
 int Ban2Weekday; //第二辆车限行的日，1=星期一。如果为0，则不存在此车。
