@@ -32,8 +32,9 @@ void setup()
   // 设置时间后, 需要注释掉设置时间的代码,并重新烧录一次. 以免掉电重新执行setup中的时间设置函数.
   rtc.halt(false);
   rtc.writeProtect(false);
-  rtc.setDOW(1);
+  rtc.setDOW(MONDAY);
   rtc.setTime(23, 59, 30);
+  //日期格式是 日月年
   rtc.setDate(8, 7, 2018);
   rtc.writeProtect(true);
 
